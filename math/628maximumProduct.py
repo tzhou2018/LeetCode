@@ -23,7 +23,7 @@ class Solution(object):
         :rtype: int
         """
         nums.sort()
-        return max(nums[-1] * nums[-2] * nums[-3] * nums[0], nums[1] * nums[-1])
+        return max(nums[-1] * nums[-2] * nums[-3], nums[0] * nums[1] * nums[-1])
 
     # 方法2
     # 在方法一中，我们实际上只要求出数组中最大的三个数以及最小的两个数，

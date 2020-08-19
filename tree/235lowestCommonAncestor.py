@@ -30,6 +30,7 @@ class Solution(object):
             else:
                 root = root.left
         return root
+
     # 使用递归
     def lowestCommonAncestor1(self, root, p, q):
         if root.val > p.val and root.val > q.val:
@@ -37,4 +38,3 @@ class Solution(object):
         if root.val < p.val and root.val < q.val:
             return self.lowestCommonAncestor(root.right, p, q)
         return root
-

@@ -16,6 +16,7 @@ class TreeNode(object):
 class Solution(object):
     def __init__(self):
         self.res = []
+
     # 中序遍历便可找到满足要求的数
     def kthSmallest(self, root, k):
         """
@@ -32,6 +33,25 @@ class Solution(object):
         self.midOrdBT(root.left)
         self.res.append(root.val)
         self.midOrdBT(root.right)
+
+
+# 另一种写法
+class Solution2:
+    def kthSmallest(self, root, k):
+        if not root or k < 1:
+            return None
+        stack = []
+        count = 0
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                root = stack.pop()
+                count += 1
+                if count == k:
+                    return root.val
+                root = root.right
 
 
 def listCreatTree(root, llist, i):
@@ -53,3 +73,4 @@ if __name__ == '__main__':
     llist = [4, 2, 6, '#', 3, 5, 7]
     root = listCreatTree(None, llist, 0)
     print(Solution().kthSmallest(root, 2))
+    print(Solution2().kthSmallest(root, 2))

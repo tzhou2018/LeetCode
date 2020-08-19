@@ -5,6 +5,7 @@
 @Email   : t-zhou@foxmail.com
 '''
 
+
 # 思路：
 # 先将非零元素放在移动到列表前面，之后列表尾部用零补全
 class Solution(object):
@@ -23,3 +24,8 @@ class Solution(object):
             nums[index] = 0
             index += 1
         return nums
+
+# 另一种思路
+# 先遍历一遍数组，找到最后一个零所在的位置p；
+# 用两个指针，一个指向位置p的指针p，一个指向数组末尾q
+# 移动p，没找到一个零与末尾元素进行交换

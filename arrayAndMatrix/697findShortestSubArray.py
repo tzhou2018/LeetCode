@@ -38,6 +38,5 @@ class Solution(object):
             ret = min(ret, numsLastIndex[nums[i]] - numsFristIndex[nums[i]] + 1)
         return ret
 
-
 if __name__ == '__main__':
     print(Solution().findShortestSubArray([1, 2, 2, 3, 1]))

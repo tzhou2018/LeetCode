@@ -34,7 +34,6 @@ class Solution(object):
             pre = l1
         return node.next
 
-
 def create_linked_list(arr=None):
     """
     根据输入的数组建立一个链表
@@ -64,7 +63,7 @@ def print_linked_list(pHead):
 
 
 if __name__ == '__main__':
-    pHead = create_linked_list(arr=[1, 2, 4])
+    pHead = create_linked_list(arr=[1, 2, 3, 4])
     print_linked_list(pHead)
     head = Solution().swapPairs(pHead)
     print_linked_list(head)

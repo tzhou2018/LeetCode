@@ -72,7 +72,7 @@ def print_linked_list(pHead):
 
 
 if __name__ == '__main__':
-    pHead = create_linked_list(arr=[1, 2, 3, 4])
+    pHead = create_linked_list(arr=[1, 2, 2, 3, 4])
     print_linked_list(pHead)
     new_pHead = Solution().deleteDuplication(pHead)
     print_linked_list(new_pHead)

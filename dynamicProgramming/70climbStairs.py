@@ -20,5 +20,7 @@ class Solution(object):
         for i in range(3, n + 1):
             res[i] = res[i - 1] + res[i - 2]
         return res[n]
+
+
 if __name__ == '__main__':
-    print(Solution().climbStairs(4))
+    print(Solution().climbStairs(8))

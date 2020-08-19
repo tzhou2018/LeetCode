@@ -37,3 +37,4 @@ class Solution(object):
             minOrdBST(root.right)
         minOrdBST(root)
         return self.maxInf
+

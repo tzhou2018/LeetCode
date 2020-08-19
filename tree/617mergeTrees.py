@@ -22,11 +22,11 @@ class Solution(object):
         :rtype: TreeNode
         """
         if not t1 and not t2:
-            return None
+            return 0
         if not t1:
-            return t2
+            return 0
         if not t2:
-            return t1
+            return 0
         # class Solution(object):
         #     def mergeTrees(self, t1, t2):
         #         """

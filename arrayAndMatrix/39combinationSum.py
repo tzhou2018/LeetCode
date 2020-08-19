@@ -8,6 +8,7 @@
 
 # 用到递归，理解起来不太容易，使用栈图帮助理解
 class Solution(object):
+
     def combinationSum(self, candidates, target):
         """
         :type candidates: List[int]
@@ -31,4 +32,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(Solution().combinationSum([2, 3, 6, 7], 7))
+    print(Solution().combinationSum([1, 2, 5], 5))

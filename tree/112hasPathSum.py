@@ -26,7 +26,6 @@ class Solution(object):
             if node.left:
                 stack.append((node.left, path + [node.left.val]))
         return False
-
     # 另一种更简洁的代码
     # 对所求的路径没有要求，只要找到就返回True
     def hasPathSumII(self, root, sume):
@@ -36,3 +35,4 @@ class Solution(object):
             return True
         return self.hasPathSumII(root.right, sume - root.val) or \
                self.hasPathSumII(root.left, sume - root.val)
+

@@ -29,3 +29,4 @@ class Solution(object):
         if not root:
             return False
         return not root.right and not root.left
+

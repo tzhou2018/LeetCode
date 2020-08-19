@@ -30,11 +30,11 @@ class Solution(object):
                 maxSide = max(maxSide, res[i][j])
         return maxSide * maxSide
 
-
 if __name__ == '__main__':
     # print(Solution().maximalSquare([[1, 0, 1, 0, 0],
     #                                 [1, 0, 1, 1, 1],
     #                                 [1, 1, 1, 1, 1],
     #                                 [1, 0, 0, 1, 0]]))
-    # print(Solution().maximalSquare([["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]))
+    print(Solution().maximalSquare(
+        [["1", "0", "1", "0", "0"], ["1", "0", "1", "1", "1"], ["1", "1", "1", "1", "1"], ["1", "0", "0", "1", "0"]]))
     print(Solution().maximalSquare([['1']]))

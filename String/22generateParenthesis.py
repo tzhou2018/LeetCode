@@ -18,6 +18,8 @@ https://leetcode-cn.com/problems/generate-parentheses/solution/hui-su-suan-fa-by
 在当前的字符串长度等于 2 * n 时，满足要求，即，在左边和右边剩余的括号数都等于 0 0 的时候结算。
 
 """
+
+
 class Solution(object):
     def generateParenthesis(self, n):
         result = []

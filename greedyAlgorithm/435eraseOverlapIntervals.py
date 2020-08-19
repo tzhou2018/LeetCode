@@ -14,6 +14,8 @@
 按区间的结尾进行排序，每次选择结尾最小，并且和前一个区间不重叠的区间。
 统计不重叠的区间，返回结果为总区间长度-不重叠区间个数
 """
+
+
 class Solution(object):
     def eraseOverlapIntervals(self, intervals):
         """

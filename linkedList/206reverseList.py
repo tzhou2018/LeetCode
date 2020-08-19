@@ -30,6 +30,7 @@ class Solution(object):
             pHead.next = head
             head = p
         return pHead.next
+
     # 使用递归
     def reversedList_recursive(self, head):
         if not head or not head.next:

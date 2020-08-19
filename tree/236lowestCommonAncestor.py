@@ -35,3 +35,16 @@ class Solution(object):
         # 在左右子树中没有找到，那一定在右子树中
         else:
             return root
+
+
+def test(root, p, q):
+    if not root or root == p or root == q:
+        return root
+    left = test(root.left, p, q)
+    right = test(root.right, p, q)
+    if not left:
+        return right
+    elif not right:
+        return left
+    else:
+        return root

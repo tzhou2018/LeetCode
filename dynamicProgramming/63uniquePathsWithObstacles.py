@@ -22,7 +22,6 @@ class Solution(object):
         res[0][0] = 1
         for i in range(1, rows):
             res[i][0] = 0 if obstacleGrid[i][0] == 1 else res[i - 1][0]
-        print(res)
         for i in range(1, cols):
             res[0][i] = 0 if obstacleGrid[0][i] == 1 else res[0][i - 1]
         for i in range(1, rows):

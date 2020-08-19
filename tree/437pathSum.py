@@ -38,6 +38,33 @@ class Solution(object):
         return count
 
 
+# 另一种写法
+class Solution2:
+    def pathSum(self, root, num):
+        if not root:
+            return 0
+        # count = pathSumStartWithRoot(root, num) + pathSum(root and root.left or None, num) + \
+        #         pathSum(root and root.right or None, num)
+        count = self.pathSumStartWithRoot(root, num) + self.pathSum(root.left, num) + \
+                self.pathSum(root.right, num)
+        return count
+
+    def pathSumStartWithRoot(self, root, num):
+        if not root:
+            return 0
+        stack = [(root, [root.val])]
+        count = 0
+        while stack:
+            node, path = stack.pop()
+            if sum(path) == num:
+                count += 1
+            if node.left:
+                stack.append((node.left, path + [node.left.val]))
+            if node.right:
+                stack.append((node.right, path + [node.right.val]))
+        return count
+
+
 def listCreatTree(root, llist, i):
     if i < len(llist):
         if llist[i] == '#':
@@ -51,25 +78,10 @@ def listCreatTree(root, llist, i):
             # 再返回根'
             return root  ###这里的return很重要
     return root
-"""
-class Solution {
-    public int pathSum(TreeNode root, int sum) {
-    if (root == null) return 0;
-    int ret = pathSumStartWithRoot(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
-    return ret;
-}
 
-    private int pathSumStartWithRoot(TreeNode root, int sum) {
-        if (root == null) return 0;
-        int ret = 0;
-        if (root.val == sum) ret++;
-        ret += pathSumStartWithRoot(root.left, sum - root.val) + pathSumStartWithRoot(root.right, sum - root.val);
-        return ret;
-    }
-}
-"""
 
 if __name__ == '__main__':
     llist = [1, 2, 3, '#', 4, 5, 6]
     root = listCreatTree(None, llist, 0)
     print(Solution().pathSum(root, 6))
+    print(Solution2().pathSum(root, 6))

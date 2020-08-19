@@ -28,3 +28,4 @@ class Solution(object):
         if matrix[row][col] != value:
             return False
         return self.check(matrix, value, row + 1, col + 1)
+

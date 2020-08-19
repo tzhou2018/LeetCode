@@ -6,6 +6,8 @@
 '''
 
 
+# 只有三种颜色（三列），在保证相邻两个房子粉刷颜色不同的情况下，
+# 求出这三列元素的粉刷完成的总价格。
 class Solution(object):
     def minCost(self, nums):
         if not nums:

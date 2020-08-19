@@ -10,6 +10,8 @@
 个子矮的人相对于个子高的人是看不见的
 参考文档：https://leetcode-cn.com/problems/queue-reconstruction-by-height/solution/gen-ju-shen-gao-zhong-jian-dui-lie-by-leetcode/
 """
+
+
 class Solution(object):
     def reconstructQueue(self, people):
         """
@@ -19,6 +21,7 @@ class Solution(object):
         if len(people) == 0:
             return []
         people.sort(key=lambda l: (-l[0], l[1]))
+        people.sort(key=lambda x: (-x[0], x[1]))
         res = []
         for e in people:
             res.insert(e[1], e)

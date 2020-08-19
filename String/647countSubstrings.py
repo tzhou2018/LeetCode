@@ -8,6 +8,7 @@
 从字符串的某一位开始，尝试着去扩展子字符串。
 """
 
+
 class Solution(object):
     count = 0
 
@@ -18,8 +19,8 @@ class Solution(object):
         """
         sLen = len(s)
         for i in range(sLen):
-            self.extendSubstrings(s, i, i) # 奇数长度
-            self.extendSubstrings(s, i, i + 1) # 偶数长度
+            self.extendSubstrings(s, i, i)  # 奇数长度
+            self.extendSubstrings(s, i, i + 1)  # 偶数长度
         return self.count
 
     def extendSubstrings(self, s, start, end):
@@ -27,3 +28,6 @@ class Solution(object):
             start -= 1
             end += 1
             self.count += 1
+
+if __name__ == '__main__':
+    print(Solution().countSubstrings("aba"))

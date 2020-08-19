@@ -37,16 +37,33 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        p0 = cur = 0
-        p2 = len(nums) - 1
-        while cur <= p2:
+        # p0 = cur = 0
+        # p2 = len(nums) - 1
+        # while cur <= p2:
+        #     if nums[cur] == 0:
+        #         nums[cur], nums[p0] = nums[p0], nums[cur]
+        #         p0 += 1
+        #         cur += 1
+        #     elif nums[cur] == 2:
+        #         nums[cur], nums[p2] = nums[p2], nums[cur]
+        #         p2 -= 1
+        #     else:
+        #         cur += 1
+        low = -1
+        cur = 0
+        high = len(nums)
+        while cur < high:
             if nums[cur] == 0:
-                nums[cur], nums[p0] = nums[p0], nums[cur]
-                p0 += 1
+                low += 1
+                nums[low], nums[cur] = nums[cur], nums[low]
                 cur += 1
             elif nums[cur] == 2:
-                nums[cur], nums[p2] = nums[p2], nums[cur]
-                p2 -= 1
+                high -= 1
+                nums[cur], nums[high] = nums[high], nums[cur]
             else:
                 cur += 1
         return nums
+
+
+if __name__ == '__main__':
+    print(Solution().sortColors([0, 1, 2, 1, 1, 1, 0, 2, 2, 0]))

@@ -41,3 +41,4 @@ def isPalindrome2(x):
         right = right * 10 + x % 10
         x = x // 10
     return x == right or x == right // 10
+

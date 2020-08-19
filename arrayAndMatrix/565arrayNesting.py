@@ -26,6 +26,5 @@ class Solution(object):
 
         return maxS
 
-
 if __name__ == '__main__':
     print(Solution().arrayNesting([0, 2, 1]))

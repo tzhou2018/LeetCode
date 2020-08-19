@@ -61,7 +61,7 @@ class Solution:
 原文链接：https://blog.csdn.net/weixin_40449300/article/details/82467298
 """
 
-class Solution:
+class Solution1:
     def fourSum(self, nums, target):
         """
         :type nums: List[int]
@@ -96,4 +96,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().fourSum([1, 0, -1, 0, -2, 2], 0))
+    print(Solution1().fourSum([1, 0, -1, 0, -2, 2], 0))

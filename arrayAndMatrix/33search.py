@@ -33,5 +33,6 @@ class Solution(object):
                     right = mid - 1
         return -1
 
+
 if __name__ == '__main__':
-    print(Solution().search([5,1,3],5))
+    print(Solution().search([5, 1, 3], 5))

@@ -13,6 +13,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 # 中顺遍历，遍历时比较当前结点与下一个结点的大小
 class Solution(object):
     last = float('-inf')
@@ -35,6 +36,27 @@ class Solution(object):
         return self.flag
 
 
+# 非递归遍历判断
+class Solution2:
+    last = float("-inf")
+
+    def isValidBST(self, root):
+        if not root:
+            return False
+        stack = []
+        while stack or root:
+            if root:
+                stack.append(root)
+                root = root.left
+            else:
+                node = stack.pop()
+                if node.val <= self.last:
+                    return False
+                self.last = node.val
+                root = node.right
+        return True
+
+
 def listCreatTree(root, llist, i):
     if i < len(llist):
         if llist[i] == '#':
@@ -51,5 +73,6 @@ def listCreatTree(root, llist, i):
 
 
 if __name__ == '__main__':
-    root = listCreatTree(None, [1, 1], 0)
+    root = listCreatTree(None, [4, 3, 7, 2, "#", 6, 8], 0)
     print(Solution().isValidBST(root))
+    print(Solution2().isValidBST(root))

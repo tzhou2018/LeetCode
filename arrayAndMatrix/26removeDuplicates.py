@@ -41,5 +41,6 @@ class Solution(object):
         return slow + 1
 
 
+
 if __name__ == '__main__':
-    print(Solution().removeDuplicatesII([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
+    print(Solution().removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))

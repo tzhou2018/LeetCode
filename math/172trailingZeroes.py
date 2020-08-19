@@ -11,6 +11,7 @@
 其中 N/5 表示不大于 N 的数中 5 的倍数贡献一个 5，N/52 表示不大于 N 的数中 52 的倍数再贡献一个 5 ...。
 """
 
+
 class Solution(object):
     def trailingZeroes(self, n):
         """
@@ -18,3 +19,7 @@ class Solution(object):
         :rtype: int
         """
         return 0 if n == 0 else n // 5 + self.trailingZeroes(n // 5)
+
+
+if __name__ == '__main__':
+    print(Solution().trailingZeroes(100))

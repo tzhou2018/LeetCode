@@ -5,6 +5,7 @@
 @Email   : t-zhou@foxmail.com
 '''
 
+
 # 遍历所给字符串，记录当前数字相同的连续子串长度为 curLen，
 # 与相邻的不同子串长度 preLen 做比较。
 class Solution(object):
@@ -24,3 +25,7 @@ class Solution(object):
             if preLen >= curLen:
                 count += 1
         return count
+
+
+if __name__ == '__main__':
+    print(Solution().countBinarySubstrings("00110011"))

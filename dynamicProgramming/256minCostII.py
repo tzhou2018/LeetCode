@@ -8,8 +8,8 @@
 
 # 大体思路同上一题
 # 本题中，我们从第 i 间屋子开始，i > 0;
-# 去 i-1 间屋子所图颜料的最小值 min1 以及次小值 min2，
-# 当 第 i 间屋子的颜色与第 i -1 间屋子的颜色是否重合
+# 取 i-1 间屋子所图颜料的最小值 min1 以及次小值 min2，
+# 判断 第 i 间屋子的颜色与第 i -1 间屋子的颜色是否重合
 # 不重合：则第 i 间屋子最小花费为 nums[i][j] + min1
 # 否则：第 i 间屋子最小花费为 nums[i][j] + min2
 
@@ -30,7 +30,6 @@ class Solution(object):
                     dp[i][j] = min1 + nums[i][j]
                 else:
                     dp[i][j] = min2 + nums[i][j]
-        print(dp)
         return min(dp[-1])
 
 

@@ -4,7 +4,7 @@
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
 '''
-
+# 最好用的方法，见方法3
 
 class Solution(object):
     def spiralOrder(self, matrix):
@@ -66,3 +66,7 @@ class Solution:
             for i in range(endY - 1, start, -1):
                 ans.append(matrix[i][start])
         return ans
+
+# 方法3
+# 参见《程序员面试指南》提供的方法--转圈打印，
+# 与解法题48号类似
