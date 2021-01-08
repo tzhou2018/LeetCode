@@ -7,6 +7,7 @@
 
 
 class Solution(object):
+    # 时间复杂度要求为 O(logN) 可以考虑用二分查找
     def search(self, nums, target):
         """
         :type nums: List[int]

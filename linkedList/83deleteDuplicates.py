@@ -13,8 +13,8 @@ class ListNode(object):
         self.next = None
 
 
-# 递归方法
 class Solution(object):
+    # 递归方法
     def deleteDuplicates(self, head):
         """
         :type head: ListNode

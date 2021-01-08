@@ -63,7 +63,7 @@ class Solution2(object):
 if __name__ == '__main__':
     arr = [
         [1, 5, 9],
-        [10, 11, 13],
+        [8, 11, 13],
         [12, 13, 15]
     ]
     solution = Solution()

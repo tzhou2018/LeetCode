@@ -13,4 +13,4 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        return len(set(s)) == len(set(t)) == len(set(zip(s,t)))
+        return len(set(s)) == len(set(t)) == len(set(zip(s, t)))

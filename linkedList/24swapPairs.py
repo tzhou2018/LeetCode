@@ -34,6 +34,7 @@ class Solution(object):
             pre = l1
         return node.next
 
+
 def create_linked_list(arr=None):
     """
     根据输入的数组建立一个链表

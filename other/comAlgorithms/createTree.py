@@ -31,6 +31,8 @@ def listCreatTree(root, llist, i):
 # 递归实现
 # 先序遍历二叉树
 n = 0
+
+
 def preOrderBT(root):
     if not root:
         return None
@@ -133,8 +135,8 @@ class NoRecursion:
 
 
 if __name__ == '__main__':
-    # llist = [4, 2, 6, '#', 3, 5, 7]
-    llist = [5, 2, 13]
+    # llist = ['1', '2', '3', '#', '5', '6', '7', '8', '#', '10']
+    llist = [1, 2, 3, "#", 5, 6, 7, "#", "#", 8, "#", 10]
     root = listCreatTree(None, llist, 0)
     p = root
     print(".............................")

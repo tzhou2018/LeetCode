@@ -22,7 +22,7 @@ class Solution:
             return False
         target = target >> 1
         dp = [[False] * (target + 1) for _ in range(lenNums)]
-        for i in range(target + 1):
+        if nums[0] <= target:
             dp[0][nums[0]] = True
         for i in range(1, lenNums):
             for j in range(1, target + 1):

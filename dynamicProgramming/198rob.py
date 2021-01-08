@@ -32,6 +32,8 @@ class Solution(object):
 参考文章
 https://leetcode-cn.com/problems/house-robber/solution/dong-tai-gui-hua-zen-yao-xiang-xian-di-gui-ji-yi-h/
 """
+
+
 class Solution2:
     def rob(self, nums):
         if not nums:

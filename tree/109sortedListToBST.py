@@ -45,6 +45,6 @@ class Solution(object):
         pre = head
         while fast and fast.next:
             pre = slow
-            slow = slow .next
+            slow = slow.next
             fast = fast.next.next
         return pre

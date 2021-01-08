@@ -29,7 +29,6 @@ class Solution(object):
             nextLayerNode = []
             sumCurLayerNode = len(curLayerNode)
             while curLayerNode:
-
                 node = curLayerNode.pop(0)
                 curLayerValue += node.val
                 if node.left:

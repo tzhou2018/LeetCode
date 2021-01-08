@@ -20,11 +20,11 @@ class Solution(object):
             row = triangle[i][:]
             for j in range(i + 1):
                 res[i][j] = min(res[i + 1][j], res[i + 1][j + 1]) + row[j]
-        print(res)
         return res[0][0]
 
+
 if __name__ == '__main__':
-    print(Solution().minimus([
+    print(Solution().minimumTotal([
         [2],
         [3, 4],
         [6, 5, 7],

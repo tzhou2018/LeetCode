@@ -13,22 +13,16 @@ class Solution(object):
         :param s:
         :return:
         """
-        if len(s) < 1:
-            return 0
-        ret = []
-        lenS = 0
-        for i in s:
-            if i not in ret:
-                ret.append(i)
-            else:
-                # print(ret)
-                ret.clear()
-                ret.append(i)
-                continue
-            if len(ret) > lenS:
-                lenS = len(ret)
-        print(ret)
-        return lenS
+        if len(s) < 2:
+            return len(s)
+        recond = dict()
+        left, right = -1, 0
+        res = 0
+        for right in range(len(s)):
+            left = max(left, recond.setdefault(s[right], -1))
+            recond[s[right]] = right
+            res = max(res, right - left)
+        return res
 
     # 方法 2
     # 动态规划
@@ -63,4 +57,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(Solution().lengthOfLongestSubstring(""))
+    print(Solution().lengthOfLongestSubstring("ohvhjdml"))

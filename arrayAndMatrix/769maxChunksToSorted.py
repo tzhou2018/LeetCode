@@ -32,5 +32,5 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    arr = [1, 3, 0, 2, 4]
+    arr = [4, 3, 2, 1, 0]
     print(Solution().maxChunksToSorted(arr))

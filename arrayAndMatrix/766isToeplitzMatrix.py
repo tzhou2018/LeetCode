@@ -7,6 +7,7 @@
 
 
 class Solution(object):
+    # 从矩阵的上边，右边开始逐个探测
     def isToeplitzMatrix(self, matrix):
         """
         :type matrix: List[List[int]]
@@ -28,4 +29,3 @@ class Solution(object):
         if matrix[row][col] != value:
             return False
         return self.check(matrix, value, row + 1, col + 1)
-

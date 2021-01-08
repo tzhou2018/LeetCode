@@ -15,7 +15,6 @@ class Solution(object):
         """
         left = 0
         right = len(nums) - 1
-        mid = 0
         while left <= right:
             mid = (left + right) // 2
             if nums[mid] == target:
@@ -25,8 +24,9 @@ class Solution(object):
             else:
                 left = mid + 1
         nums.insert(left, target)
+
         return left
 
 
 if __name__ == '__main__':
-    print(Solution().searchInsert([], 4))
+    print(Solution().searchInsert([1,3,5,6], 4))

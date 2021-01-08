@@ -23,7 +23,6 @@ class Solution(object):
             return None
         cur1, cur2 = headA, headB
         while cur2 != cur1:
-            print(cur1, cur2)
             cur1 = cur1.next if cur1 is not None else headB
             cur2 = cur2.next if cur2 is not None else headA
         if cur2 == cur1:

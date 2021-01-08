@@ -13,11 +13,14 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 # 思路：
 """
 利用二叉查找树的中序遍历为有序的性质，
 计算中序遍历中临近的两个节点之差的绝对值，取最小值。
 """
+
+
 class Solution(object):
     def getMinimumDifference(self, root):
         """
@@ -35,6 +38,6 @@ class Solution(object):
                 self.maxInf = min(self.maxInf, root.val - self.preNone.val)
             self.preNone = root
             minOrdBST(root.right)
+
         minOrdBST(root)
         return self.maxInf
-

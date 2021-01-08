@@ -39,7 +39,7 @@ class Solution(object):
 
     # 参考荷兰国旗的解法，时间复杂度O(n)
     def searchRange1(self, arr, target):
-        if not arr:
+        if not arr or target not in arr:
             return [-1, -1]
         if min(arr) > target:
             return [-1, -1]
@@ -50,7 +50,7 @@ class Solution(object):
         while lo < most:
             if arr[lo] < target:
                 less += 1
-                self.swap(arr, less, lo)
+                # self.swap(arr, less, lo)
                 lo += 1
             elif arr[lo] > target:
                 break

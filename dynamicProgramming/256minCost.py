@@ -15,7 +15,6 @@ class Solution(object):
         if len(nums[0]) == 0:
             return 0
         rows = len(nums)
-        cols = len(nums[0])
         dp = [[0] * 3 for _ in range(rows)]
         dp[0] = nums[0]
         for i in range(1, rows):

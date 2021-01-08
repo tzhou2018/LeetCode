@@ -43,3 +43,4 @@ class Solution(object):
                 res.append(right - left + 1)
                 left = i + 1
         return res
+

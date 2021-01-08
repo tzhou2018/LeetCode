@@ -21,7 +21,7 @@ class Solution(object):
         if len(people) == 0:
             return []
         people.sort(key=lambda l: (-l[0], l[1]))
-        people.sort(key=lambda x: (-x[0], x[1]))
+        # people.sort(key=lambda x: (-x[0], x[1]))
         res = []
         for e in people:
             res.insert(e[1], e)

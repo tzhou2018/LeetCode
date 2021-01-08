@@ -13,7 +13,7 @@ class TreeNode(object):
         self.right = None
 
 # 思路：
-# 首先中中序遍历二叉树， 将节点值存储到数组 nums 中
+# 首先中序遍历二叉树， 将节点值存储到数组 nums 中
 # 使用双指针遍历nums, 找到满足条件的值
 class Solution(object):
     def findTarget(self, root, k):

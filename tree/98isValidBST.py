@@ -14,7 +14,7 @@ class TreeNode(object):
         self.right = None
 
 
-# 中顺遍历，遍历时比较当前结点与下一个结点的大小
+# 中顺遍历，遍历时比较当前结点与上一个结点的大小
 class Solution(object):
     last = float('-inf')
     flag = True
@@ -30,6 +30,7 @@ class Solution(object):
             self.isValidBST(root.left)
         if root.val <= self.last:
             self.flag = False
+            return self.flag
         self.last = root.val
         if self.flag:
             self.isValidBST(root.right)

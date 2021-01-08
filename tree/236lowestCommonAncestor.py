@@ -29,10 +29,10 @@ class Solution(object):
         # 在左子树中没有找到，那一定在右子树中
         if not left:
             return right
-        # 在右子树中没有找到，那一定在右子树中
+        # 在右子树中没有找到，那一定在左子树中
         elif not right:
             return left
-        # 在左右子树中没有找到，那一定在右子树中
+        # 在左右子树中没有找到，那一定在根中
         else:
             return root
 

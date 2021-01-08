@@ -25,7 +25,6 @@ class Solution(object):
             temp = sorted(dp[i - 1])
             min1, min2 = temp[0], temp[1]
             for j in range(cols):
-
                 if j != dp[i - 1].index(min1):
                     dp[i][j] = min1 + nums[i][j]
                 else:

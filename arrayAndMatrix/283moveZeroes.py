@@ -25,7 +25,18 @@ class Solution(object):
             index += 1
         return nums
 
-# 另一种思路
-# 先遍历一遍数组，找到最后一个零所在的位置p；
-# 用两个指针，一个指向位置p的指针p，一个指向数组末尾q
-# 移动p，没找到一个零与末尾元素进行交换
+
+# 方法2
+# 这里可以参照双指针的思路解决，指针j是一直往后移动的，如果指向的值不等于0才对他进行操作。
+# 指针i 记录走过的非零元素
+def moveZeroes(nums):
+    i: int = 0
+    for j in range(len(nums)):
+        if nums[j] != 0:
+            nums[i], nums[j] = nums[j], nums[i]
+            i += 1
+    return nums
+
+
+if __name__ == '__main__':
+    print(moveZeroes([0, 1, 0, 3, 12]))

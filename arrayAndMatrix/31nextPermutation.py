@@ -15,6 +15,7 @@
 # 从数组末尾开始，先找到第一个不在正确序列中的数字，即，后一个元素大于前一个元素，记录位置 pos;
 # 在 num[pos:] 中找出最小的那个元素(该元素是大于num[pos]中的最小的那个)，记录下标 minPos；
 # 交换 num[pos] num[minPos];
+# 反转 num[pos+1:]
 
 class Solution(object):
     def nextPermutation(self, nums):
@@ -44,6 +45,7 @@ class Solution(object):
         nums[pos], nums[minPos] = nums[minPos], nums[pos]
         self.reverse(nums, pos + 1, len(nums) - 1)
         print(nums)
+
     def reverse(self, nums, start, end):
         while start < end:
             nums[start], nums[end] = nums[end], nums[start]
@@ -52,4 +54,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(Solution().nextPermutation([1,2,3,4,9,8,7]))
+    print(Solution().nextPermutation([1, 2, 3, 4, 9, 8, 7]))

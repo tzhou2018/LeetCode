@@ -27,6 +27,7 @@ class Solution(object):
                 start = mid + 1
         return start
 
+
 # 双指针解法，类似于有环链表中找出环的入口：
 class Solution2(object):
     def findDuplicate(self, nums):
@@ -48,4 +49,4 @@ class Solution2(object):
 
 if __name__ == '__main__':
     arr = [1, 3, 4, 2, 2]
-    print(Solution2().findDuplicate(arr))
+    print(Solution().findDuplicate(arr))

@@ -13,6 +13,8 @@
 在扫描结束之后，我们将 count 与 n 进行比较。如果 count >= n，那么返回 True，否则返回 False。
 参考链接：https://leetcode-cn.com/problems/can-place-flowers/solution/chong-hua-wen-ti-by-leetcode/
 """
+
+
 class Solution(object):
     def canPlaceFlowers(self, flowerbed, n):
         """
@@ -27,7 +29,7 @@ class Solution(object):
                 continue
             if cnt < n:
                 pre = 0 if i == 0 else flowerbed[i - 1]
-                next = 0 if i == lenFlo -1 else flowerbed[i + 1]
+                next = 0 if i == lenFlo - 1 else flowerbed[i + 1]
                 if pre == 0 and next == 0:
                     cnt += 1
                     flowerbed[i] = 1

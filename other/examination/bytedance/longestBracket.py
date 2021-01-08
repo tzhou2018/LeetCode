@@ -71,7 +71,7 @@ class Solution1:
     # 对上述解法在进行空间优化
     """
     从左到右遍历字符串的过程中，用 left 记录 '(' 的数量，用 right 记录 ')' 的数量。并且在遍历的过程中：
-    1、如果 left == right，显然这个时候 right 个 ')' 都将一定能够得到匹配。所以当前的有效括号长度为 2 * right。然后更新 max。
+    1、如果 left == right，显然这个时候 right 个 ')' 都将一定能够得到匹配。所以当前的有效括号长度为 2 * left。然后更新 max。
     2、如果 left < right，显然这个时候部分 ')' 一定得不到匹配，此时我们把 left 和 right 都置为 0。
     由于'(' ')' 是等价的，还需要从右进行遍历，更新max
     """
@@ -105,6 +105,25 @@ class Solution1:
                 left, right = 0, 0
         return Max
 
+# 动态规划
+class Solution3:
+    def maxLength(self, str):
+        if not str:
+            return 0
+        strLen = len(str)
+        dp = [0] * strLen
+        pre = 0
+        res = 0
+
+        for i in range(1, strLen):
+            if str[i] == ')':
+                pre = i - dp[i - 1] - 1
+                if pre >= 0 and str[pre] == '(':
+                    dp[i] = dp[i - 1] + 2 + (dp[pre - 1] if pre > 0 else 0)
+            res = max(res, dp[i])
+        return res
+
 
 if __name__ == '__main__':
     print(Solution1().longestValidParentheses1("(()"))
+    print(Solution3().maxLength("(()"))

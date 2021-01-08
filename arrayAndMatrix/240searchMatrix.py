@@ -6,6 +6,7 @@
 '''
 
 class Solution(object):
+    # 从左下角或者右上角开始
     def searchMatrix(self, matrix, target):
         """
         :type matrix: List[List[int]]
