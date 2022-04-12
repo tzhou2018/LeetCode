@@ -21,7 +21,7 @@ def heapSort(array):
 def heapAjust(array, s, m):
     # temp 记录当前值，也就是非终端节点值
     temp = array[s]
-    j = s * 2
+    j = s * 2 + 1
     while j <= m:
         if j < m and array[j] < array[j + 1]:
             j += 1
@@ -38,7 +38,7 @@ def swap(array, first, i):
     array[first], array[i] = array[i], array[first]
 
 
-# 另一种写法
+# 另一种写法,更清爽
 def heapSort1(arr):
     if not arr or len(arr) < 2:
         return 0
@@ -85,6 +85,6 @@ def innerHeap(str):
 
 if __name__ == '__main__':
     array = [50, 10, 90, 30, 40, 0, 80, 70, 60, 80]
-    print(heapSort1(array[:]))
+    print(heapSort(array[:]))
     # print(array)
     print(innerHeap(array))

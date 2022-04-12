@@ -54,4 +54,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(Solution().nextPermutation([1, 2, 3, 4, 9, 8, 7]))
+    print(Solution().nextPermutation([1, 2, 3, 4, 1, 1, 1]))

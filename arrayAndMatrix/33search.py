@@ -19,7 +19,8 @@ class Solution(object):
         right = len(nums) - 1
         left = 0
         while left <= right:
-            mid = (left + right) // 2
+            mid = left + ((right - left) >> 1)
+            # mid = (left + right) // 2
             if nums[mid] == target:
                 return mid
             if nums[mid] >= nums[left]:
