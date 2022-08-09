@@ -6,6 +6,12 @@
 """
 
 
+# 思路
+# 使用长度为 26 的数组存储每个元素出现的次数。
+# 使用滑动窗口，左右侧各设置left，right指针；
+# 当窗口大小减去出现最多字符数据小于 k 时，右指针滑动；否则，左指针右滑并且将当前元素所在位置的个数减 1
+#
+
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         left, right = 0, 0
