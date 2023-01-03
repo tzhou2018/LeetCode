@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/2/16 14:14
 @FileName: 26removeDuplicates.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 class Solution(object):
