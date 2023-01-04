@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/4 21:12
 @FileName: 409longestPalindrome.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 class Solution(object):
