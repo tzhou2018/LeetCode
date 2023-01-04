@@ -5,6 +5,7 @@
 @Email   : t-zhou@foxmail.com
 '''
 
+
 class Solution(object):
     # 从左下角或者右上角开始
     def searchMatrix(self, matrix, target):
@@ -15,8 +16,8 @@ class Solution(object):
         """
         if not matrix:
             return False
-        rows = len(matrix) -1
-        cols = len(matrix[0]) -1
+        rows = len(matrix) - 1
+        cols = len(matrix[0]) - 1
         row, col = rows, 0
         while row >= 0 and col <= cols:
             if matrix[row][col] == target:
@@ -26,6 +27,7 @@ class Solution(object):
             else:
                 col += 1
         return False
+
 
 if __name__ == '__main__':
     array = [

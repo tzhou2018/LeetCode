@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/2/18 10:31
 @FileName: 22generateParenthesis.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 # 回溯算法，深度优先遍历
 
