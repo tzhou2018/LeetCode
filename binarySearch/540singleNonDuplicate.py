@@ -43,6 +43,7 @@ class Solution(object):
             else:
                 return nums[mid]
         return nums[lo]
+
     # 方法2
     # 思路：遍历数组进行异或运算
     def singleNonDuplicate1(self, nums):
@@ -54,3 +55,8 @@ class Solution(object):
         for num in nums:
             res ^= num
         return res
+
+
+if __name__ == '__main__':
+    res = Solution().singleNonDuplicate([1, 1, 2, 3, 3, 4, 4, 8, 8])
+    print(res)

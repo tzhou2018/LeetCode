@@ -27,5 +27,6 @@ class Solution(object):
                 return mid
         return high
 
+
 if __name__ == '__main__':
     print(Solution().mySqrt(8))

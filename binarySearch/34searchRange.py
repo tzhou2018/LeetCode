@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/17 14:47
 @FileName: 34searchRange.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 # 思路

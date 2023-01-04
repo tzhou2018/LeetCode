@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/17 11:46
-@FileName: 74nextGreatestLetter.py
+@FileName: 744nextGreatestLetter.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 class Solution(object):
