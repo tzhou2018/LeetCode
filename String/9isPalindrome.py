@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/5 9:40
 @FileName: 9isPalindrome.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 # 思路1
@@ -41,3 +41,7 @@ def isPalindrome2(x):
         right = right * 10 + x % 10
         x = x // 10
     return x == right or x == right // 10
+
+
+if __name__ == '__main__':
+    print(isPalindrome2(111))
