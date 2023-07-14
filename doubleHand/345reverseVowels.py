@@ -13,6 +13,8 @@
 时间复杂度为 O(N)：只需要遍历所有元素一次
 空间复杂度 O(1)：只需要使用两个额外变量
 """
+
+
 class Solution(object):
     def reverseVowels(self, s):
         """
@@ -34,6 +36,7 @@ class Solution(object):
             else:
                 left += 1
         return ''.join(s)
+
     # 思路同上述方法
     def reverseVowels1(self, s):
         """

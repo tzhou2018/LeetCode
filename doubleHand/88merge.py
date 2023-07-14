@@ -60,3 +60,9 @@ class Solution(object):
                 index2 -= 1
                 mergeIndex -= 1
         return nums1
+
+
+if __name__ == '__main__':
+    # 处理升序数组时需要进行额外的判断条件
+    res = Solution().merge( [3,2,1, 0, 0, 0], 3,[6,5,2], 3,)
+    print(res)

@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/15 21:15
 @FileName: 524findLongestWord.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 # 思路：

@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/15 20:40
 @FileName: 141hasCycle.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 
 
 # Definition for singly-linked list.

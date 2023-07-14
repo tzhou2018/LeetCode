@@ -1,9 +1,9 @@
-'''
+"""
 @Time    : 2020/3/15 15:54
 @FileName: 633judgeSquareSum.py
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
-'''
+"""
 import math
 
 
