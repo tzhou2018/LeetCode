@@ -36,7 +36,7 @@ class Solution(object):
         if not head or not head.next:
             return head
         next = head.next
-        newHead = self.reverseList(head.next)
+        newHead = self.reversedList_recursive(head.next)
         next.next = head
         head.next = None
         return newHead

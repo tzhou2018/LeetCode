@@ -7,14 +7,13 @@
 import sys
 
 
-def foo(*args, **kwargs):
-    print('args=', args, "len:", len(args))
-    print('kwargs=', kwargs, "len:", len(kwargs))
-    print('**********************')
+def f(n):
+    if n == 1:
+        return 3
+    res = 2 * f(n - 1) + 1
+    return res
 
 
 if __name__ == '__main__':
-    foo(1, 2, 3)
-    foo(a=1, b=2, c=3)
-    foo(1, 2, 3, a=1, b=2, c=3)
-    foo(1, 'b', 'c', a=1, b='b', c='c')
+    res = f(4)
+    print(res)

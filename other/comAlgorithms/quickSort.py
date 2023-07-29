@@ -4,6 +4,7 @@
 @Author  : Solarzhou
 @Email   : t-zhou@foxmail.com
 """
+import time
 
 
 # nums = [4, 2, 5, 3, 8]
@@ -40,6 +41,8 @@ import random
 
 # 改进后的快排 + 随机快排
 def quickSort1(nums, lo, hi):
+    # 判断程序执行时长
+    time.time()
     if lo >= hi:
         return 0
     swap(nums, lo + int(random.random() * (hi - lo + 1)), hi)
