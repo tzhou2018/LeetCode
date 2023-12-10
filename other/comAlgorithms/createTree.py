@@ -138,8 +138,8 @@ class NoRecursion:
         if not root:
             return '#,'
         return str(root.val) + ',' + \
-               self.Serialize(root.left) + ',' \
-               + self.Serialize(root.right)
+            self.Serialize(root.left) + ',' \
+            + self.Serialize(root.right)
 
     # 反序列化
     def Deserialize(self, s):
@@ -161,7 +161,7 @@ class NoRecursion:
 
 if __name__ == '__main__':
     # llist = ['1', '2', '3', '#', '5', '6', '7', '8', '#', '10']
-    llist = [1, 2, 3, "#", 5, 6, 7, "#", "#", 8, "#", 10]
+    llist = [1, 2, 3, "#", 5, 6, 7, "#", "#", 8, "#", 10, "#", "#", ]
     # llist = [1, 2]
 
     root = listCreatTree(None, llist, 0)
@@ -175,17 +175,17 @@ if __name__ == '__main__':
     postOrdBT(root)
 
     # 序列化
-    print()
-    serList =  NoRecursion().Serialize(root)
-    node = NoRecursion().Deserialize(serList)
-    print("先序   中序  后序")
-    print(node.val)
-    preOrderBT(node)
-    print()
-    midOrdBT(node)
-    print()
-    postOrdBT(node)
-    print(root.val)
+    # print()
+    # serList =  NoRecursion().Serialize(root)
+    # node = NoRecursion().Deserialize(serList)
+    # print("先序   中序  后序")
+    # print(node.val)
+    # preOrderBT(node)
+    # print()
+    # midOrdBT(node)
+    # print()
+    # postOrdBT(node)
+    # print(root.val)
     # while root
     # print("\n非递归。。。。。")
     # NoRecursion().preOrder(root)

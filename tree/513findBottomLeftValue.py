@@ -55,16 +55,16 @@ def listCreatTree(root, llist, i):
     return root
 
 
-def preOrderBT(root):
-    if not root:
-        return None
-    print(root.val, end='\t')
-    preOrderBT(root.left)
-    preOrderBT(root.right)
+# def preOrderBT(root):
+#     if not root:
+#         return None
+#     print(root.val, end='\t')
+#     preOrderBT(root.left)
+#     preOrderBT(root.right)
 
 
 if __name__ == '__main__':
     llist = [3, 9, 20, '#', '#', 15, 7]
     root = listCreatTree(None, llist, 0)
-    preOrderBT(root)
+    # preOrderBT(root)
     print(Solution().findBottomLeftValue(root))
