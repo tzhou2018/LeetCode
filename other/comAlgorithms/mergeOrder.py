@@ -61,8 +61,8 @@ class Solution:
         mid = lo + (hi - lo) // 2
         left = self.InversePairs(data, lo, mid)
         right = self.InversePairs(data, mid + 1, hi)
-        self.Merge(data, lo, mid, hi)
-        return data
+        res = self.Merge(data, lo, mid, hi)
+        return left + right + res
 
         # temp 作为辅助数组，每次将temp中基本有序的元素赋值给 data，
 
@@ -91,7 +91,7 @@ class Solution:
             j += 1
         # 将局部排序好的res 去 替换原数组arr
         data[low:high + 1] = res
-        return data
+        return count
 
 
 if __name__ == '__main__':

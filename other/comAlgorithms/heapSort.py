@@ -85,6 +85,6 @@ def innerHeap(str):
 
 if __name__ == '__main__':
     array = [50, 10, 90, 30, 40, 0, 80, 70, 60, 80]
-    print(heapSort(array[:]))
+    print(heapSort1(array[:]))
     # print(array)
-    print(innerHeap(array))
+    # print(innerHeap(array))
