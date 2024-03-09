@@ -25,7 +25,7 @@ class Solution(object):
         else:
             return 0
         if result >= 2 ** 31 or result <= -2 ** 31:
-            return 2 ** 31 -1 if result > 0 else -2 ** 31
+            return 2 ** 31 - 1 if result > 0 else -2 ** 31
         return result
 
     def convertS(self, s):

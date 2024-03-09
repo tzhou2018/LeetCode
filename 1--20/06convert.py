@@ -27,4 +27,4 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    print(Solution().convert('AB', 1))
+    print(Solution().convert('LEETCODEISHIRING', 3))
