@@ -17,10 +17,14 @@ class Solution(object):
         :rtype: List[int]
         """
         indexs = []
-        res = [0 for _  in range(len(T))]
+        res = [0 for _ in range(len(T))]
         for i in range(len(T)):
             while indexs and T[i] > T[indexs[-1]]:
                 preindex = indexs.pop()
                 res[preindex] = (i - preindex)
             indexs.append(i)
         return res
+
+
+if __name__ == '__main__':
+    print(Solution().dailyTemperatures([73, 74, 75, 71, 69, 72, 76, 73]))

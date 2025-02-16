@@ -54,7 +54,7 @@ def heapSort1(arr):
 
 
 def heapInsert(arr, index):
-    while (arr[index] > arr[int((index - 1) / 2)]):
+    while arr[index] > arr[int((index - 1) / 2)]:
         swap(arr, index, int((index - 1) / 2))
         index = int((index - 1) / 2)
 

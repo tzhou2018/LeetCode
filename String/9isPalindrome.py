@@ -44,4 +44,4 @@ def isPalindrome2(x):
 
 
 if __name__ == '__main__':
-    print(isPalindrome2(111))
+    print(isPalindrome2(1221))
